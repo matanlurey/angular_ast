@@ -30,7 +30,7 @@ class PipeExpression extends ExpressionImpl implements BinaryExpression {
 
   /// Token.
   @override
-  final Token operator;
+  Token operator;
 
   PipeExpression(
     this.beginToken,
@@ -98,9 +98,4 @@ class PipeExpression extends ExpressionImpl implements BinaryExpression {
 
   @override
   MethodElement get bestElement => null;
-
-  @override
-  set operator(Token token) {
-    throw new UnsupportedError('Cannot be modified');
-  }
 }

@@ -294,6 +294,13 @@ class NgScanner {
   }
 
   FormatException _unexpected() {
+    if (_scanner.isDone) {
+      return new FormatException(
+        'Expected content, got EOF',
+        _scanner.string,
+        _scanner.position,
+      );
+    }
     final char = new String.fromCharCode(_scanner.peekChar());
     _state = _NgScannerState.hasError;
     return new FormatException(

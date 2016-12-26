@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex: 1;
+}
+
+.CodeMirror {
+  flex: 3;
+  height: auto;
+}
+
+#debugging {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 4px;
+}
+
+#errors {
+  color: darkred;;
+  flex: 1;
+}
+
+#errors.none {
+  display: none;
+}
+
+#outline {
+  flex: 3;
+  overflow: auto;
+  white-space: pre;
+}

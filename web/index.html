@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>AngularDart AST Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="packages/codemirror/codemirror.css" rel="stylesheet">
+    <link href="packages/codemirror/theme/material.css" rel="stylesheet" media="screen">
+    <link href="style/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <textarea id="editor"></textarea>
+      <div id="debugging">
+        <div id="errors" class="none"></div>
+        <div id="outline"></div>
+      </div>
+    </div>
+    <script defer src="packages/codemirror/codemirror.js"></script>
+    <script defer src="packages/codemirror/addon/mode/multiplex.js"></script>
+    <script defer src="packages/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+    <script defer src="packages/browser/dart.js"></script>
+    <script type="application/dart" src="main.dart"></script>
+  </body>
+</html>
